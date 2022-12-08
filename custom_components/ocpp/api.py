@@ -414,7 +414,7 @@ class ChargePoint(cp):
             await self.get_configuration(ckey.heartbeat_interval.value)
             await self.configure(
                 ckey.meter_values_sampled_data.value,
-                self.entry.data.get(CONF_MONITORED_VARIABLES, DEFAULT_MEASURAND),
+                "Current.Import,Current.Offered,Energy.Active.Import.Register,Frequency,Power.Active.Import,Power.Factor,Power.Offered",
             )
             await self.configure(
                 ckey.meter_value_sample_interval.value,
